@@ -41,7 +41,7 @@ public class CubeGang : MonoBehaviour
         distToTarget = Vector3.Distance(transform.position, target.transform.position);
         if( isAlive && (distToTarget > 15) /*&& InputAbilities.swarming == false && InputAbilities.forcing == false*/){
             rb.AddForce(heading * speed, ForceMode.Acceleration);
-
+            //todo-Make force horizontal only? or is it good for the cubes to float :/ depends on context
         }
         if (/*(InputAbilities.swarming == true) && */(distToTarget > 4) && isAlive/* && !InputAbilities.forcing*/)
         {
